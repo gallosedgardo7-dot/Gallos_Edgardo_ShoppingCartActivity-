@@ -1,27 +1,5 @@
-using System;
 
-namespace Cart_System
-{
-    class Product
-    {
-        public int Id;
-        public string Name;
-        public double Price;
-        public int RemainingStock;
-
-        public Product(int id, string name, double price, int stock, string category)
-        {
-            Id = id;
-            using System;
-
-namespace Cart_System
-    {
-        class Product
-        {
-            public int Id;
-            public string Name;
-            public double Price;
-            public int RemainingStock;
+ public int RemainingStock;
             public string Category;
 
             public Product(int id, string name, double price, int stock, string category)
@@ -235,9 +213,4 @@ namespace Cart_System
                     {
                         Console.WriteLine($"{p.Name} - {p.RemainingStock} left");
                     }
-                }
-
-                Console.ReadKey();
-            }
-        }
-    }
+                     
