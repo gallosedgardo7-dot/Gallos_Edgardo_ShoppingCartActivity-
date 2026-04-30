@@ -9,12 +9,13 @@ namespace Cart_System
         public double Price;
         public int RemainingStock;
 
-        public Product(int id, string name, double price, int stock)
+        public Product(int id, string name, double price, int stock,string category)
         {
             Id = id;
             Name = name;
             Price = price;
             RemainingStock = stock;
+            Category = category;
         }
 
         public void DisplayProduct()
@@ -29,10 +30,10 @@ namespace Cart_System
 {
     Product[] products = new Product[]
     {
-        new Product(1,"Grit",350,5),
-        new Product(2,"Free Will",1000,2),
-        new Product(3,"Inspire",500,4),
-        new Product(4,"Wisdom",400,2)
+        new Product(1,"Grit",350,5,"Journal"),
+        new Product(2,"Free Will",1000,2,"Journal"),
+        new Product(3,"Inspire",500,4,"Books"),
+        new Product(4,"Wisdom",400,2,"Books")
     };
 
     int[] cartProductID = new int[5];
@@ -40,8 +41,12 @@ namespace Cart_System
     double[] cartTotal = new double[5];
 
     int cartCount = 0;
-    string choice = "YES";
 
+    string orderHistory = new string[5];
+    
+    int orderCount = 0;
+    string choice = "YES";
+    
     while (choice.ToUpper() == "YES")
     {
         Console.Clear();
